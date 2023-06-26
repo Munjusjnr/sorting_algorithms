@@ -71,7 +71,7 @@ void cocktail_sort_list(listint_t **list)
 			break;
 		swp = 0;
 		last = first;
-		while (first->prev != NULL)
+		while (first != NULL && first->prev != NULL)
 		{
 			if (first->n < first->prev->n)
 			{
