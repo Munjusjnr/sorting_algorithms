@@ -61,6 +61,9 @@ void cocktail_sort_list(listint_t **list)
 				first = first->next;
 			}
 		}
+		if (!swp)
+			break;
+		swp = 0;
 		last = first;
 		while (first->prev != NULL)
 		{
