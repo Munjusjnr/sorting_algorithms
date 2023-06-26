@@ -10,6 +10,9 @@
 
 void swap(listint_t **list, listint_t *a, listint_t *b)
 {
+	if (list == NULL || (*list) == NULL || (*list)->next == NULL)
+		return;
+
 	if (a->prev != NULL)
 		a->prev->next = b;
 	if (b->next != NULL)
