@@ -45,11 +45,12 @@ void swap(listint_t **list, listint_t *a, listint_t *b)
 
 void cocktail_sort_list(listint_t **list)
 {
-	listint_t *first = *list, *last = NULL;
+	listint_t *first, *last = NULL;
 	int swp = 1;
 
 	if (list == NULL || (*list) == NULL || (*list)->next == NULL)
 		return;
+	first = *list;
 	while (swp)
 	{
 		swp = 0;
@@ -62,9 +63,7 @@ void cocktail_sort_list(listint_t **list)
 				print_list(*list);
 			}
 			else
-			{
 				first = first->next;
-			}
 		}
 		if (!swp)
 			break;
